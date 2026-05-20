@@ -3,7 +3,7 @@
 #include "Engine//Input.h"
 
 Bullet::Bullet(GameObject* parent)
-	:GameObject(parent, "Player"), hModel_(-1)
+	:GameObject(parent, "Bullet"), hModel_(-1)
 {
 }
 
@@ -11,7 +11,7 @@ void Bullet::Initialize()
 {
 	hModel_ = Model::Load("Bulletziki.fbx");
 	assert(hModel_ >= 0);
-	tr_.position_ = { 0.0f, -4.0f, 0.0f };
+	tr_.scale_ = { 0.3f, 0.3f, 0.3f };
 }
 
 void Bullet::Update()
