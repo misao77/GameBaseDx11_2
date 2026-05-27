@@ -13,7 +13,7 @@ EnemyBullet::~EnemyBullet()
 
 void EnemyBullet::Initialize()
 {
-    hModel_ = Model::Load("Bulletziki.fbx");
+    hModel_ = Model::Load("Bulletteki.fbx");
 
     transform_.scale_ = { 0.5f, 0.5f, 0.5f };
 
@@ -24,10 +24,10 @@ void EnemyBullet::Initialize()
 
 void EnemyBullet::Update()
 {
-    transform_.position.z = transform_.position.z - speed_;
+    transform_.position_.z = transform_.position_.z - speed_;
 
     // 【改造点2】手前に消えていくので、一定の座標（例：-50.0f）より手前に来たら消す
-    if (transform_.position.z < -50.0f)
+    if (transform_.position_.z < -50.0f)
     {
         KillMe(); // 自分を削除する
     }

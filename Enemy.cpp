@@ -3,6 +3,7 @@
 #include "Engine//Input.h"
 #include "Engine//SphereCollider.h"
 #include "Bullet.h"
+#include "EnemyBullet.h"
 
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
@@ -23,6 +24,7 @@ void Enemy::Initialize()
 
 	SphereCollider* collider = new SphereCollider(XMFLOAT3(0.0f, 0.0f, 0.0f), 1.0f);
 	AddCollider(collider);
+	new EnemyBullet(this);
 }
 
 void Enemy::Update()

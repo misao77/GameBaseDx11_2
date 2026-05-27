@@ -15,7 +15,7 @@ public:
 
 private:
     int hModel_;          // モデルのハンドル
-    // Transform tr_;    // Bullet.h にありますが、親の transform_ を使っているなら不要かも？一応残してもOK
+    Transform tr_;    // Bullet.h にありますが、親の transform_ を使っているなら不要かも？一応残してもOK
     float speed_;         // 弾の速さ
 };
 
