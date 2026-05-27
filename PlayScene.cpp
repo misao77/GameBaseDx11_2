@@ -4,6 +4,7 @@
 #include "Enemy.h"
 #include "Bullet.h"
 #include "Engine//SceneManager.h"
+#include "Engine//Camera.h"
 
 PlayScene::PlayScene(GameObject* parent)
 	:GameObject(parent,"PlayScene"),hModel_(-1)//メンバーの設定はこっちで
@@ -12,11 +13,11 @@ PlayScene::PlayScene(GameObject* parent)
 
 void PlayScene::Initialize()//その他はここで
 {
-	/*hModel_ = Model::Load("Oden.fbx");
-	assert(hModel_ >= 0);*/
 	Instantiate<Player>(this);//Playerのインスタンス＝プレイヤーオブジェクトを作る
 	//Instantiate<Bullet>(this);//弾のインスタンス＝プレイヤーオブジェクトを作る
 	Instantiate<Enemy>(this);
+	//Camera::SetPosition(XMFLOAT3(0.0f, 30.0f, 0.0f));
+	//Camera::SetTarget(XMFLOAT3(0.0f, 0.0f, 0.0f));
 }
 
 void PlayScene::Update()
@@ -26,7 +27,6 @@ void PlayScene::Update()
 		SceneManager* pSceneManager = (SceneManager*)(this->GetParent());
 		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
 	}
-	
 }
 
 void PlayScene::Draw()

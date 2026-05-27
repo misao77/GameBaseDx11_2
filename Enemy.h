@@ -11,6 +11,7 @@ public:
 	void Draw() override;
 	void Release() override;
 	void OnCollision(GameObject* pTarget);
+	void SetPosition(XMFLOAT3 pos);
 private:
 	int hModel_;//モデルのハンドル
 	//Transform tr_;// トランスフォーム

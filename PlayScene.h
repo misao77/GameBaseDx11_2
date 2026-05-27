@@ -20,6 +20,7 @@ public:
 	void Release() override;
 private:
 	int hModel_;//モデルのハンドル
-	Transform tr_;//おでん用のトランスフォーム
+	//int enemySpawnTimer_;
+	Transform tr_;//トランスフォーム
 };
 

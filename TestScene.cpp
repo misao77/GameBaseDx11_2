@@ -31,7 +31,7 @@ void TestScene::Update()
 //•`‰æ
 void TestScene::Draw()
 {
-	transform_.scale_ = { 1.5f, 1.5f, 1.5f };//‰æ‘œ‚Ì‘å‚«‚³
+	transform_.scale_ = { 1.0f, 1.0f, 1.0f };//‰æ‘œ‚Ì‘å‚«‚³
 	Image::SetTransform(hTitlePic_, transform_);//‰æ‘œ‚ÌˆÊ’u‚âŒü‚«‚È‚Ç‚ğİ’è
 	Image::Draw(hTitlePic_);//‰æ‘œ‚ğ•\¦
 }
