@@ -26,6 +26,10 @@ void Bullet::Initialize()
 
 void Bullet::Update()
 {
+	transform_.position_.x += direction_.x * speed_;
+	transform_.position_.y += direction_.y * speed_;
+
+
 	transform_.position_.z = transform_.position_.z + speed_;
 	if (transform_.position_.z > 50.0f)
 	{
@@ -42,4 +46,9 @@ void Bullet::Draw()
 
 void Bullet::Release()
 {
+}
+
+void Bullet::SetDirection(XMFLOAT3 direction)
+{
+	direction_ = direction;
 }

@@ -13,7 +13,7 @@ ClearScene::~ClearScene()
 
 void ClearScene::Initialize()
 {
-	hClearPic_ = Image::Load("Clear2.png");
+	hClearPic_ = Image::Load("Clear3.jpg");
 	assert(hClearPic_ >= 0);
 }
 
