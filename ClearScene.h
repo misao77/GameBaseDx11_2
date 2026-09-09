@@ -12,5 +12,7 @@ public:
 	void Release() override;
 private:
 	int hClearPic_;//モデルのハンドル
+
+	float timer_;
 };
 
